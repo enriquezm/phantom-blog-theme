@@ -1,0 +1,35 @@
+<body>
+  <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+        <header id="header">
+          <div class="inner">
+
+            <!-- Logo -->
+              <a href="index.html" class="logo">
+                <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+              </a>
+
+            <!-- Nav -->
+              <nav>
+                <ul>
+                  <li><a href="#menu">Menu</a></li>
+                </ul>
+              </nav>
+
+          </div>
+        </header>
+
+      <!-- Menu -->
+        <nav id="menu">
+          <h2>Menu</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            {% for page in site.pages %}
+              {% if page.title %}
+              <li><a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
